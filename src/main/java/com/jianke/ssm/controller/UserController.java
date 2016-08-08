@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.jianke.ssm.po.User;
 import com.jianke.ssm.po.UserCustom;
 import com.jianke.ssm.service.UserService;
 
@@ -21,9 +22,11 @@ public class UserController {
 
 	@Autowired
 	private UserService userService;
+	
+
 
 	@RequestMapping("/queryUser")
-	public ModelAndView queryuser(HttpServletRequest request) throws Exception {
+	public ModelAndView queryUser(HttpServletRequest request) throws Exception {
 		
 		System.out.println(request.getParameter("id"));
 

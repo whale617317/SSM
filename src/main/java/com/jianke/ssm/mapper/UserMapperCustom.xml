@@ -8,7 +8,7 @@
    	<!-- 商品查询条件通过ItemsQueryVo包装对象 中itemsCustom属性传递 -->
    		<if test="userCustom!=null">
    			<if test="userCustom.name!=null and userCustom.name!=''">
-   				user.name LIKE '%${userCustom.name}%'
+   				user.name LIKE '%${user.name}%'
    			</if>
    		</if>
 	
@@ -18,8 +18,8 @@
   	<!-- parameterType传入包装对象(包装了查询条件)
   		resultType建议使用扩展对象
   	 -->
-  	<select id="findUserList" parameterType="com.jianke.ssm.UserQueryVo"
-  		 resultType="com.jianke.ssm.po.UserQueryVo">
+  	<select id="findUserList" parameterType="com.jianke.ssm.po.User"
+  		 resultType="com.jianke.ssm.po.User">
   		SELECT user.* FROM user  
   		<where>
   			<include refid="query_items_where"></include>

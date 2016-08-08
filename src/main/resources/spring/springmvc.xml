@@ -19,7 +19,8 @@
 	<context:component-scan base-package="com.jianke.ssm.controller"></context:component-scan>
 	
 		
-	<mvc:annotation-driven conversion-service="conversionService"></mvc:annotation-driven>
+		
+	<mvc:annotation-driven></mvc:annotation-driven>
 	
 
 	<!-- 视图解析器
@@ -28,7 +29,7 @@
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<!-- 配置jsp路径的前缀 -->
-		<property name="prefix" value="/webapp/WEB-INF/jsp/"/>
+		<property name="prefix" value="/WEB-INF/jsp/"/>
 		<!-- 配置jsp路径的后缀 -->
 		<property name="suffix" value=".jsp"/>
 	</bean>
